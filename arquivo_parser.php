@@ -10,6 +10,10 @@
     echo "</pre>";
 
     foreach ($lines as $line){
-        echo $line."<br>";
+        echo "<pre>";
+       //print_r(explode(",",$line));
+        
+        print_r(str_getcsv($line));
+        echo "</pre>";
     }
 ?>
