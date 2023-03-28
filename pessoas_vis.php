@@ -18,7 +18,9 @@
     </tr>
     </thead>
     <tbody>
-    <?php for ($i=0; $i<count($dados_clientes); $i++){ ?>
+    <?php 
+        for ($i=0; $i<count($dados_clientes); $i++){ 
+    ?>
     <tr>
             <td><?php echo $dados_clientes[$i]['nome']; ?></td>
             <td><?php echo $dados_clientes[$i]['idade']; ?></td>
