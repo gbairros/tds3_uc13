@@ -13,7 +13,7 @@
 	$total_registros = $rs->rowCount();
 
 	for ($i = 0; $i< sizeof($dados); $i++){
-		echo "Nome: ".$dados[$i][5]."<br>";
+		echo "Nome: ".$dados[$i]["nome"]."<br>";
 	}
 
 	$db->close();
