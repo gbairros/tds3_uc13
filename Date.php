@@ -43,7 +43,6 @@ class Date {
        
     } 
         
-
     public function getDate() {
         if($this->validateMonthSize($this->month)){
             return $this->day ."/".$this->month ."/".$this->year;
