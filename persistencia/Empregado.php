@@ -45,10 +45,7 @@
             $sql = "INSERT INTO empregado(no_matricula, nome, sobrenome, data_contratacao, data_nascimento) 
             VALUES ($this->noMatricula, '$this->nome', '$this->sobreNome', '$this->dataContratacao', '$this->dataNascimento')";
             
-
             $status = $con->exec($sql);
-
-            echo "Aqui";
 
             $db->close();
         }
