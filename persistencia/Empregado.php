@@ -1,6 +1,7 @@
 <?php 
     require_once ("Database.php");
     class Empregado{
+        private $id;
         private $noMatricula;
         private $nome;
         private $sobrenome;
@@ -43,7 +44,21 @@
             $con = $db->connect();
 
             $sql = "INSERT INTO empregado(no_matricula, nome, sobrenome, data_contratacao, data_nascimento) 
-            VALUES ($this->noMatricula, '$this->nome', '$this->sobreNome', '$this->dataContratacao', '$this->dataNascimento')";
+            VALUES ($this->noMatricula, '$this->nome', '$this->sobrenome', '$this->dataContratacao', '$this->dataNascimento')";
+            
+            $status = $con->exec($sql);
+
+            $db->close();
+        }
+
+
+        public function atualizar(){
+            $db = new Database();
+            $con = $db->connect();
+
+            $sql = "UPDATE empregado SET no_matricula = $this->noMatricula, nome = '$this->nome', 
+                sobrenome = '$this->sobrenome', data_contratacao = '$this->dataContratacao', 
+                data_nascimento = '$this->dataNascimento' WHERE id = $this->id";
             
             $status = $con->exec($sql);
 
