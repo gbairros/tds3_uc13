@@ -24,11 +24,10 @@
         public function __construct(){
         }
 
-        public function obterTodos(){
-            $db = new Database();
+        public function obterTodos(){            $db = new Database();
             $con = $db->connect();
 
-            $sql = "SELECT * FROM empregado";
+            $sql = "SELECT * FROM empregado limit 100";
             $rs = $con->query($sql);
 
             $status = $rs->execute();
@@ -57,7 +56,7 @@
             $con = $db->connect();
 
             $sql = "UPDATE empregado SET no_matricula = $this->noMatricula, nome = '$this->nome', 
-                sobrenome = '$this->sobrenome', data_contratacao = '$this->dataContratacao', 
+                sobrenome = :sobrenome, data_contratacao = '$this->dataContratacao', 
                 data_nascimento = '$this->dataNascimento' WHERE id = $this->id";
             
             $status = $con->exec($sql);
