@@ -5,7 +5,8 @@
     $senha = $_POST["senha"];
 
     $usuario = new Usuario();
-    $status = $usuario->autenticar($login, $senha);
+    $senha_cripto = hash("sha3-256", $senha);
+    $status = $usuario->autenticar($login, $senha_cripto);
 
     if ($status == true){
         header("location:principal.php");
