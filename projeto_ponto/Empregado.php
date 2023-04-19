@@ -44,8 +44,7 @@ Empregado
         return $dados;
     }
 
-    public function inserir()
-    {
+    public function inserir(){
         $db = new Database();
         $con = $db->connect();
 
@@ -57,9 +56,7 @@ VALUES ($this->noMatricula, '$this->nome', '$this->sobrenome', '$this->dataContr
         $db->close();
     }
 
-
-    public function atualizar()
-    {
+    public function atualizar(){
         $db = new Database();
         $con = $db->connect();
 

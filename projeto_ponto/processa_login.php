@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     require_once ("Usuario.php");
 
     $login = $_POST["login"];
@@ -9,6 +11,9 @@
     $status = $usuario->autenticar($login, $senha_cripto);
 
     if ($status == true){
+        $_SESSION["logado"] = true;
+        $_SESSION["user"] = $login;
+
         header("location:principal.php");
     }
     else{
