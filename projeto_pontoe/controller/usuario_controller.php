@@ -41,6 +41,14 @@
 
                 require_once("../view/usuario/listar_usuario.php");
             }
+            else if($acao == "editar"){
+                $id = $get["id"];
+                $usuario = new Usuario();
+                $dados = $usuario->buscarPorId($id);
+                
+                require_once("../view/usuario/editar_usuario.php");
+            }    
+
         }
     }
     

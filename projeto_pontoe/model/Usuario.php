@@ -47,6 +47,24 @@ class Usuario
     }
 
 
+    public function buscarPorId($id)
+    {
+        $db = new Database();
+        $con = $db->connect();
+
+        $sql = "SELECT id, nome, sobrenome, email, login FROM usuario WHERE id = :id";
+        $st = $con->prepare($sql);
+        $st->bindParam(':id', $id);
+
+        $status = $st->execute();
+        $dados = $st->fetchAll();
+
+        $db->close();
+        return $dados;
+    }
+
+
+
     public function listarTodos($pagina = null, $contador = 100)
     {
         $db = new Database();
