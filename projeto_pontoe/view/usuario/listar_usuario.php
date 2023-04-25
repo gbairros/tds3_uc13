@@ -11,7 +11,7 @@
 			<td>Login</td>
 		</tr>
 		<?php
-			for ($i=0; $i<=sizeof($dados);$i++){
+			for ($i=0; $i<sizeof($dados);$i++){
 				echo "<tr>";
 				echo "<td>".$dados[$i]["id"]."</td>";
 				echo "<td>".$dados[$i]["nome"]."</td>";
