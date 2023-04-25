@@ -34,9 +34,12 @@
                 else{
                     //enviar msg de erro
                 }
+            }
+            else if($acao == "listar"){
+                $usuario = new Usuario();
+                $dados = $usuario->listarTodos();
 
-
-
+                require_once("../view/usuario/listar_usuario.php");
             }
         }
     }

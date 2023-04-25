@@ -46,9 +46,22 @@ class Usuario
 
     }
 
-    public function __construct()
+
+    public function listarTodos($pagina = null, $contador = 100)
     {
+        $db = new Database();
+        $con = $db->connect();
+
+        $sql = "SELECT id, nome, sobrenome, email, login FROM usuario limit $contador";
+        $rs = $con->query($sql);
+
+        $status = $rs->execute();
+        $dados = $rs->fetchAll();
+
+        $db->close();
+        return $dados;
     }
+
 
     public function autenticar($login, $senha)
     {
