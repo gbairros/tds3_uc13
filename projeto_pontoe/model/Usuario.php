@@ -40,7 +40,7 @@ class Usuario
 
         $idUsuario = $con->lastInsertId();
 
-        if ($status){
+        if ($status == true){
             return true;
         }
 
