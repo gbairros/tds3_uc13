@@ -2,7 +2,16 @@
 	//require_once("../infra/valida_sessao.php");
 ?>
 <html>
-	<head><title>Login</title></head>	
+	<head>
+		<title>Login</title>
+		<script src="../static/js/jquery-3.6.4.min.js"></script>
+		<script type="text/javascript">
+			$( document ).ready(function() {
+			});
+		</script>
+
+	</head>	
+
 	<body>
 		<h3>Ola eu sou a tela principal - Login com Sucesso!!</h3>
 		<ul>

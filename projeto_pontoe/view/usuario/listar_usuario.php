@@ -12,7 +12,7 @@
 		</tr>
 		<?php
 			for ($i=0; $i<sizeof($dados);$i++){
-				echo "<tr>";
+				echo "<tr>";	
 				echo "<td><a href=\"../../../controller/usuario_controller.php?acao=editar&id=".$dados[$i]["id"]."\">".$dados[$i]["id"]."</a></td>";
 				echo "<td>".$dados[$i]["nome"]."</td>";
 				echo "<td>".$dados[$i]["sobrenome"]."</td>";
