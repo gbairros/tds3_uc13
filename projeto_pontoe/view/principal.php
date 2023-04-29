@@ -4,12 +4,6 @@
 <html>
 	<head>
 		<title>Login</title>
-		<script src="../static/js/jquery-3.6.4.min.js"></script>
-		<script type="text/javascript">
-			$( document ).ready(function() {
-			});
-		</script>
-
 	</head>	
 
 	<body>
