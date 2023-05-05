@@ -9,6 +9,7 @@
 			<td>Sobrenome</td>
 			<td>Email</td>
 			<td>Login</td>
+			<td>Excluir</td>
 		</tr>
 		<?php
 			for ($i=0; $i<sizeof($dados);$i++){
@@ -18,6 +19,7 @@
 				echo "<td>".$dados[$i]["sobrenome"]."</td>";
 				echo "<td>".$dados[$i]["email"]."</td>";
 				echo "<td>".$dados[$i]["login"]."</td>";
+				echo "<td align='center'><a href='#'>x</a></td>";
 				echo "</tr>";
 			}
 			?>

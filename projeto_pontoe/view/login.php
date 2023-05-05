@@ -11,14 +11,13 @@
      			 	login: $("#login").val(),
       			 	senha: $("#senha").val(),
     			};
-
 				$.ajax({
 					type: "POST",
 					url: "../controller/processa_login.php",
 					data: formDados,
 					dataType: "json",
 					}).done(function (dataRetorno) {
-						if(dataRetorno.erro > 0){
+						if(dataRetorno.erro == 0){
 							alert(dataRetorno.msg);
 						}
 						
